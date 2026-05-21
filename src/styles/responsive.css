@@ -1,0 +1,362 @@
+/**
+ * PetoClub Admin - Responsive Design Utilities
+ *
+ * Breakpoints:
+ * - xs: 0px - 374px (very small phones)
+ * - sm: 375px - 639px (small phones)
+ * - md: 640px - 767px (tablets portrait)
+ * - lg: 768px - 1023px (tablets landscape, small laptops)
+ * - xl: 1024px - 1279px (desktops)
+ * - 2xl: 1280px+ (large desktops)
+ */
+
+/* ===== Responsive Container ===== */
+
+.responsive-container {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 100%;
+}
+
+.responsive-container-narrow {
+  @apply w-full mx-auto px-4 sm:px-6;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .responsive-container { max-width: 640px; }
+  .responsive-container-narrow { max-width: 576px; }
+}
+
+@media (min-width: 768px) {
+  .responsive-container { max-width: 768px; }
+  .responsive-container-narrow { max-width: 672px; }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container { max-width: 1024px; }
+  .responsive-container-narrow { max-width: 896px; }
+}
+
+@media (min-width: 1280px) {
+  .responsive-container { max-width: 1280px; }
+  .responsive-container-narrow { max-width: 1120px; }
+}
+
+@media (min-width: 1536px) {
+  .responsive-container { max-width: 1536px; }
+  .responsive-container-narrow { max-width: 1344px; }
+}
+
+/* ===== Responsive Grid ===== */
+
+.grid-responsive {
+  @apply grid grid-cols-1 gap-4;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive {
+    @apply grid-cols-2 gap-4;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    @apply grid-cols-2 gap-6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    @apply grid-cols-3 gap-6;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-responsive {
+    @apply grid-cols-4 gap-6;
+  }
+}
+
+/* Stats cards grid - responsive */
+.grid-stats {
+  @apply grid grid-cols-1 gap-3 sm:gap-4;
+}
+
+@media (min-width: 480px) {
+  .grid-stats {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 640px) {
+  .grid-stats {
+    @apply grid-cols-3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-stats {
+    @apply grid-cols-4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-stats {
+    @apply grid-cols-6;
+  }
+}
+
+/* ===== Responsive Text ===== */
+
+.text-responsive-xl {
+  @apply text-xl sm:text-2xl lg:text-3xl;
+}
+
+.text-responsive-lg {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+.text-responsive-base {
+  @apply text-sm sm:text-base lg:text-base;
+}
+
+.text-responsive-sm {
+  @apply text-xs sm:text-sm lg:text-sm;
+}
+
+/* ===== Responsive Spacing ===== */
+
+.p-responsive {
+  @apply p-3 sm:p-4 lg:p-6;
+}
+
+.px-responsive {
+  @apply px-3 sm:px-4 lg:px-6;
+}
+
+.py-responsive {
+  @apply py-3 sm:py-4 lg:py-6;
+}
+
+.gap-responsive {
+  @apply gap-2 sm:gap-3 lg:gap-4;
+}
+
+/* ===== Responsive Flex ===== */
+
+.flex-responsive {
+  @apply flex flex-col sm:flex-row;
+}
+
+.flex-responsive-reverse {
+  @apply flex flex-col-reverse sm:flex-row;
+}
+
+/* ===== Responsive Tables ===== */
+
+/* Make table horizontally scrollable on small screens */
+.table-responsive {
+  @apply overflow-x-auto -mx-4 sm:mx-0;
+}
+
+.table-responsive > * {
+  @apply min-w-full sm:min-w-0;
+}
+
+/* Table cell responsive hiding */
+.hide-mobile {
+  @apply hidden sm:table-cell;
+}
+
+.hide-tablet {
+  @apply hidden lg:table-cell;
+}
+
+.show-mobile-only {
+  @apply table-cell sm:hidden;
+}
+
+/* ===== Responsive Cards ===== */
+
+.card-responsive {
+  @apply p-3 sm:p-4 lg:p-6;
+}
+
+.card-grid-responsive {
+  @apply grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6;
+}
+
+/* ===== Responsive Buttons ===== */
+
+.button-responsive {
+  @apply w-full sm:w-auto;
+}
+
+.button-group-responsive {
+  @apply flex flex-col sm:flex-row gap-2;
+}
+
+/* ===== Responsive Modals/Dialogs ===== */
+
+.modal-responsive {
+  @apply w-full max-w-[95vw] sm:max-w-[500px] lg:max-w-[600px];
+}
+
+.modal-responsive-lg {
+  @apply w-full max-w-[95vw] sm:max-w-[600px] lg:max-w-[800px];
+}
+
+/* ===== Responsive Forms ===== */
+
+.form-responsive {
+  @apply grid grid-cols-1 gap-3 sm:gap-4;
+}
+
+@media (min-width: 640px) {
+  .form-grid-2 {
+    @apply grid-cols-2;
+  }
+}
+
+/* ===== Responsive Sidebar ===== */
+
+/* Sidebar behavior on different screen sizes */
+@media (max-width: 767px) {
+  .sidebar-hidden-mobile {
+    @apply -translate-x-full;
+  }
+
+  .sidebar-visible-mobile {
+    @apply translate-x-0;
+  }
+}
+
+/* ===== Safe Areas for Mobile ===== */
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+.safe-area-all {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* ===== Responsive Utilities ===== */
+
+/* Hide elements at specific breakpoints */
+.hide-on-mobile {
+  @apply hidden sm:block;
+}
+
+.hide-on-tablet {
+  @apply hidden lg:block;
+}
+
+.hide-on-desktop {
+  @apply lg:hidden;
+}
+
+/* Show elements only at specific breakpoints */
+.show-only-mobile {
+  @apply block sm:hidden;
+}
+
+.show-only-tablet {
+  @apply hidden md:block lg:hidden;
+}
+
+.show-only-desktop {
+  @apply hidden lg:block;
+}
+
+/* ===== Touch-friendly sizing ===== */
+
+/* Minimum touch target size: 44x44pt (iOS) / 48x48dp (Android) */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+  @apply sm:min-w-0 sm:min-h-0;
+}
+
+.touch-friendly-button {
+  @apply min-h-[44px] px-4;
+  @apply sm:min-h-0 sm:px-4;
+}
+
+.touch-friendly-input {
+  @apply min-h-[44px];
+  @apply sm:min-h-0;
+}
+
+/* ===== Responsive Image ===== */
+
+.img-responsive {
+  @apply w-full h-auto;
+}
+
+.img-cover-responsive {
+  @apply w-full h-48 sm:h-56 lg:h-64 object-cover;
+}
+
+/* ===== Responsive Video/Embed ===== */
+
+.embed-responsive {
+  @apply relative w-full;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive-item {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* ===== Print Styles ===== */
+
+@media print {
+  .no-print {
+    @apply hidden;
+  }
+
+  .print-only {
+    @apply block;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+}
+
+/* ===== Landscape Orientation ===== */
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .landscape-compact {
+    @apply py-2 px-3;
+  }
+}
+
+/* ===== Dark mode responsive adjustments ===== */
+
+@media (prefers-color-scheme: dark) {
+  .dark-responsive {
+    @apply dark:invert dark:filter;
+  }
+}
+
+/* ===== Reduced motion responsive ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce-hide {
+    @apply hidden;
+  }
+}
